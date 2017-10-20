@@ -22,7 +22,7 @@
 	
 		<flight-model>jsb</flight-model>
 		
-		<aero>f22a-jsbsim</aero>
+		<aero>f22-jsbsim</aero>
 		
 		<fuel-fraction>1</fuel-fraction>
 		

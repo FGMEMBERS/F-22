@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="http://jsbsim.sourceforge.net/JSBSim.xsl"?>
-<fdm_config name="f22a" version="2.0" release="ALPHA"
+<fdm_config name="f22-jsbsim" version="2.0" release="ALPHA"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
 
@@ -8,13 +8,13 @@
   <author> Aeromatic v 0.96, Eli Wonnacott </author>
   <filecreationdate>2017-10-19</filecreationdate>
   <version>$Revision: 1.20 $</version>
-  <description> Models a f22a. </description>
+  <description> Models an F-22A. </description>
  </fileheader>
 
 <!--
-  File:     f22a.xml
+  File:     f22-jsbsim.xml
   Inputs:
-    name:          f22a
+    name:          f22-jsbsim
     type:          two-engine transonic/supersonic fighter
     max weight:    83500 lb
     wing span:     44.5 ft

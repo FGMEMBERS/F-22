@@ -83,7 +83,7 @@
 
 	<model>
 	<name>left-burner</name>
-		<path>Aircraft/F-22/Models/Effects/Afterburner/AfterBurner.xml</path>
+		<path>Aircraft/F-22/Models/Effects/Afterburner/AfterBurner2.xml</path>
 			<offsets>
 				<x-m>6.727</x-m>
 			<y-m>-0.55</y-m>
@@ -94,7 +94,7 @@
 	
 	<model>
 	<name>right-burner</name>
-		<path>Aircraft/F-22/Models/Effects/Afterburner/AfterBurner.xml</path>
+		<path>Aircraft/F-22/Models/Effects/Afterburner/AfterBurner2.xml</path>
 			<offsets>
 				<x-m>6.727</x-m>
 			<y-m>0.55</y-m>

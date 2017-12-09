@@ -249,9 +249,24 @@
       </range>
       <output>fcs/elevator-pos-rad</output>
    </aerosurface_scale>
+   
+   <kinematic name="Elevator Position">
+      <input>fcs/elevator-pos-rad</input>
+      <traverse>
+        <setting>
+          <position>-1</position>
+          <time>1</time>
+        </setting>
+        <setting>
+          <position>1</position>
+          <time>1</time>
+        </setting>
+       </traverse>
+      <output>fcs/elevator-pos-rad2</output>
+   </kinematic>
 
    <aerosurface_scale name="elevator normalization">
-      <input>fcs/elevator-pos-rad</input>
+      <input>fcs/elevator-pos-rad2</input>
       <domain>
         <min> -0.35 </min>
         <max>  0.35 </max>
@@ -293,9 +308,39 @@
       </range>
       <output>fcs/right-aileron-pos-rad</output>
    </aerosurface_scale>
+   
+   <kinematic name="Right Aileron Position">
+      <input>fcs/right-aileron-pos-rad</input>
+      <traverse>
+        <setting>
+          <position>-1</position>
+          <time>1</time>
+        </setting>
+        <setting>
+          <position>1</position>
+          <time>1</time>
+        </setting>
+       </traverse>
+      <output>fcs/right-aileron-pos-rad2</output>
+   </kinematic>
+   
+   <kinematic name="Left Aileron Position">
+      <input>fcs/left-aileron-pos-rad</input>
+      <traverse>
+        <setting>
+          <position>-1</position>
+          <time>1</time>
+        </setting>
+        <setting>
+          <position>1</position>
+          <time>1</time>
+        </setting>
+       </traverse>
+      <output>fcs/left-aileron-pos-rad2</output>
+   </kinematic>
 
    <aerosurface_scale name="left aileron normalization">
-      <input>fcs/left-aileron-pos-rad</input>
+      <input>fcs/left-aileron-pos-rad2</input>
       <domain>
         <min> -0.35 </min>
         <max>  0.35 </max>
@@ -308,7 +353,7 @@
    </aerosurface_scale>
 
    <aerosurface_scale name="right aileron normalization">
-      <input>fcs/right-aileron-pos-rad</input>
+      <input>fcs/right-aileron-pos-rad2</input>
       <domain>
         <min> -0.35 </min>
         <max>  0.35 </max>
@@ -367,9 +412,24 @@
       </range>
       <output>fcs/rudder-pos-rad</output>
    </aerosurface_scale>
+   
+   <kinematic name="Rudder Position">
+      <input>fcs/rudder-pos-rad</input>
+      <traverse>
+        <setting>
+          <position>-1</position>
+          <time>1</time>
+        </setting>
+        <setting>
+          <position>1</position>
+          <time>1</time>
+        </setting>
+       </traverse>
+      <output>fcs/rudder-pos-rad2</output>
+   </kinematic>
 
    <aerosurface_scale name="rudder normalization">
-      <input>fcs/rudder-pos-rad</input>
+      <input>fcs/rudder-pos-rad2</input>
       <domain>
         <min> -0.35 </min>
         <max>  0.35 </max>

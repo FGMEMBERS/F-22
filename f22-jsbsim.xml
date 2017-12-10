@@ -183,7 +183,7 @@
    <engine file="F119-PW-100">
     <location unit="IN">
       <x> 684.00 </x>
-      <y>  20.00 </y>
+      <y>   0.00 </y>
       <z>   0.00 </z>
     </location>
     <orient unit="DEG">
@@ -195,7 +195,7 @@
     <thruster file="direct">
      <location unit="IN">
        <x> 684.00 </x>
-       <y>  20.00 </y>
+       <y>   0.00 </y>
        <z>   0.00 </z>
      </location>
      <orient unit="DEG">

@@ -86,8 +86,8 @@
 		<path>Aircraft/F-22/Models/Effects/Afterburner/AfterBurner2.xml</path>
 			<offsets>
 				<x-m>6.727</x-m>
-			<y-m>-0.55</y-m>
-			<z-m>-0.747</z-m>
+			<y-m>-0.6</y-m>
+			<z-m>-0.9</z-m>
 			
 		</offsets>
 	</model>
@@ -97,8 +97,8 @@
 		<path>Aircraft/F-22/Models/Effects/Afterburner/AfterBurner2.xml</path>
 			<offsets>
 				<x-m>6.727</x-m>
-			<y-m>0.55</y-m>
-			<z-m>-0.747</z-m>
+			<y-m>0.6</y-m>
+			<z-m>-0.9</z-m>
 			
 		</offsets>
 	</model>

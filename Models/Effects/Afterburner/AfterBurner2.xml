@@ -5,7 +5,6 @@
  <path>flame.ac</path>
 
   <offsets>
-  <z-m>5.95</z-m> 
   <pitch-deg>90</pitch-deg>
   </offsets>
   
@@ -34,7 +33,7 @@
 	<type>translate</type>
 	<object-name>FlameModel</object-name>
 	<factor>0.0</factor>
-	<offset-m>5.94</offset-m>
+	<offset-m>0</offset-m>
 	<axis>
 		<x>1.0</x>
 		<y>0</y>
@@ -61,11 +60,11 @@
  
 
 
- <animation>
+<!-- <animation>
   <type>billboard</type>
   <object-name>FlameModel</object-name>
   <spherical type="bool">false</spherical>
- </animation>
+ </animation> -->
  
  
  <animation>
@@ -97,7 +96,7 @@
 	<object-name>FlameModel</object-name>
 	<property>/controls/engines/engine/throttle</property>    
   <x-min>1.0</x-min>
-  <y-min>1.0</y-min>
+  <y-min>1.8</y-min>
   <z-min>0.5</z-min>    
 	<x-factor>1.0</x-factor>
 	<y-factor>1.0</y-factor>
@@ -116,7 +115,7 @@
 	</axis>
 </animation>  
 
- 
+<!-- 
  	<animation>
 		<type>textranslate</type>
 		<object-name>FlameModel</object-name>
@@ -127,6 +126,6 @@
 			<y>1</y>
 			<z>0</z>
 		</axis>
-	</animation>
+	</animation> -->
   
 </PropertyList>

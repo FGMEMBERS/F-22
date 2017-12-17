@@ -682,78 +682,42 @@
 	
 <!-- Nozzle vector animations -->
 	
-		<animation>
+	<animation>
 		<type>rotate</type>
 			<object-name>right-up-vector</object-name>
-				<object-name>left-up-vector</object-name>
-				<object-name>right-burner</object-name>
-				<object-name>left-burner</object-name>
-					<property>engines/engine[0]/vector-norm</property>
-						<factor>20</factor>
-							<center>
-								<x-m>6.42824</x-m>
-									<y-m>0</y-m>
-								<z-m>-0.414674</z-m>
-							</center>
-						<axis>
-					<x>0</x>
+			<object-name>left-up-vector</object-name>
+			<object-name>right-burner</object-name>
+			<object-name>left-burner</object-name>
+			<property>surface-positions/elevator-pos-norm</property>
+			<factor>20</factor>
+			<center>
+				<x-m>6.42824</x-m>
+				<y-m>0</y-m>
+				<z-m>-0.414674</z-m>
+			</center>
+			<axis>
+				<x>0</x>
 				<y>1</y>
-			<z>0</z>
-		</axis>
+				<z>0</z>
+			</axis>
 	</animation>
 
 	<animation>
 		<type>rotate</type>
 			<object-name>right-down-vector</object-name>
-				<object-name>left-down-vector</object-name>
-					<property>engines/engine[0]/vector-norm</property>
-						<factor>20</factor>
-							<center>
-								<x-m>6.42824</x-m>
-									<y-m>0</y-m>
-								<z-m>-1.06084</z-m>
-							</center>
-						<axis>
-					<x>0</x>
+			<object-name>left-down-vector</object-name>
+			<property>surface-positions/elevator-pos-norm</property>
+			<factor>20</factor>
+			<center>
+				<x-m>6.42824</x-m>
+				<y-m>0</y-m>
+				<z-m>-1.06084</z-m>
+			</center>
+			<axis>
+				<x>0</x>
 				<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-			<animation>
-		<type>rotate</type>
-			<object-name>right-up-vector</object-name>
-				<object-name>left-up-vector</object-name>
-					<property>surface-positions/elevator-pos-norm</property>
-						<factor>20</factor>
-							<center>
-								<x-m>6.42824</x-m>
-									<y-m>0</y-m>
-								<z-m>-0.414674</z-m>
-							</center>
-						<axis>
-					<x>0</x>
-				<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>rotate</type>
-			<object-name>right-down-vector</object-name>
-				<object-name>left-down-vector</object-name>
-					<property>surface-positions/elevator-pos-norm</property>
-						<factor>20</factor>
-							<center>
-								<x-m>6.42824</x-m>
-									<y-m>0</y-m>
-								<z-m>-1.06084</z-m>
-							</center>
-						<axis>
-					<x>0</x>
-				<y>1</y>
-			<z>0</z>
-		</axis>
+				<z>0</z>
+			</axis>
 	</animation>
 
 <!-- Nose gear animations-->

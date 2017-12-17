@@ -229,6 +229,19 @@
  </propulsion>
 
  <flight_control name="FCS: f22a">
+   
+   <function name="fcs/flap-cmd-auto">
+    <product>
+     <property>gear/gear-cmd-norm</property>
+     <table>
+      <independentVar lookup="row">velocities/mach</independentVar>
+      <tableData>
+       0.25  1
+       0.36  0
+      </tableData>
+     </table>
+    </product>
+   </function>
 
   <channel name="Pitch">
 
@@ -445,7 +458,7 @@
 
   <channel name="Flaps">
    <kinematic name="Flaps Control">
-     <input>fcs/flap-cmd-norm</input>
+     <input>fcs/flap-cmd-auto</input>
      <traverse>
        <setting>
           <position>  0 </position>

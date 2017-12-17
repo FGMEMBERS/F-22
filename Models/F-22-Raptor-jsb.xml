@@ -466,7 +466,7 @@
 	<animation>
 		<type>translate</type>
 			<object-name>right-slat</object-name>
-				<property>surface-positions/flap-pos-norm</property>
+				<property>fdm/jsbsim/fcs/slat-pos-norm</property>
 					<factor>0.05</factor>
 						<axis>
 					<x>-1</x>
@@ -478,7 +478,7 @@
 	<animation>
 		<type>rotate</type>
 			<object-name>right-slat</object-name>
-				<property>surface-positions/flap-pos-norm</property>
+				<property>fdm/jsbsim/fcs/slat-pos-norm</property>
 					<factor>-15</factor>
 						<axis>
 							<x1-m>-0.115611</x1-m>
@@ -493,7 +493,7 @@
 	<animation>
 		<type>translate</type>
 			<object-name>left-slat</object-name>
-				<property>surface-positions/flap-pos-norm</property>
+				<property>fdm/jsbsim/fcs/slat-pos-norm</property>
 					<factor>0.05</factor>
 						<axis>
 					<x>-1</x>
@@ -505,7 +505,7 @@
 	<animation>
 		<type>rotate</type>
 			<object-name>left-slat</object-name>
-				<property>surface-positions/flap-pos-norm</property>
+				<property>fdm/jsbsim/fcs/slat-pos-norm</property>
 					<factor>-15</factor>
 						<axis>
 							<x1-m>2.82814</x1-m>

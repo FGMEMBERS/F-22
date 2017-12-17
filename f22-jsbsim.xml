@@ -491,31 +491,36 @@
 
   </channel>
 
-  <channel name="Slats">
-   <kinematic name="Slats Control">
-     <input>fcs/flap-cmd-norm</input>
+  <channel name="Leading Edge Flaps">
+  
+   <summer name="LEF Sum">
+      <input>aero/alpha-rad</input>
+      <clipto>
+        <min> 0 </min>
+        <max>0.5</max>
+      </clipto>
+   </summer>
+   
+   <kinematic name="LEF Control">
+     <input>fcs/lef-sum</input>
      <traverse>
        <setting>
           <position>  0 </position>
           <time>      0 </time>
        </setting>
        <setting>
-          <position> 10 </position>
+          <position>  1 </position>
           <time>      1 </time>
        </setting>
-       <setting>
-          <position> 15 </position>
-          <time>      2 </time>
-       </setting>
      </traverse>
-     <output>fcs/slat-pos-deg</output>
+     <output>fcs/slat-pos-rad</output>
    </kinematic>
 
-   <aerosurface_scale name="slat normalization">
-      <input>fcs/slat-pos-deg</input>
+   <aerosurface_scale name="LEF normalization">
+      <input>fcs/slat-pos-rad</input>
       <domain>
         <min>  0 </min>
-        <max> 15 </max>
+        <max> 0.5</max>
       </domain>
       <range>
         <min> 0 </min>

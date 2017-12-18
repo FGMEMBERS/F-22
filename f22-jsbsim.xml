@@ -234,10 +234,10 @@
     <product>
      <property>gear/gear-cmd-norm</property>
      <table>
-      <independentVar lookup="row">velocities/mach</independentVar>
+      <independentVar lookup="row">velocities/ve-kts</independentVar>
       <tableData>
-       0.25  1
-       0.36  0
+       160  1
+       240  0
       </tableData>
      </table>
     </product>

@@ -291,6 +291,43 @@
       <output>fcs/elevator-pos-norm</output>
    </aerosurface_scale>
 
+   <aerosurface_scale name="Thrust Vector Control">
+      <input>fcs/pitch-trim-sum</input>
+      <range>
+        <min> -0.35 </min>
+        <max>  0.35 </max>
+      </range>
+      <output>fcs/tv-pos-rad</output>
+   </aerosurface_scale>
+   
+   <kinematic name="TV Position">
+      <input>fcs/tv-pos-rad</input>
+      <traverse>
+        <setting>
+          <position>-1</position>
+          <time>0.5</time>
+        </setting>
+        <setting>
+          <position>1</position>
+          <time>0.5</time>
+        </setting>
+       </traverse>
+      <output>fcs/tv-pos-rad2</output>
+   </kinematic>
+
+   <aerosurface_scale name="TV normalization">
+      <input>fcs/tv-pos-rad2</input>
+      <domain>
+        <min> -0.35 </min>
+        <max>  0.35 </max>
+      </domain>
+      <range>
+        <min> -1 </min>
+        <max>  1 </max>
+      </range>
+      <output>fcs/tvc-pos-norm</output>
+   </aerosurface_scale>
+
   </channel>
 
   <channel name="Roll">
@@ -581,11 +618,11 @@
           <table>
             <independentVar lookup="row">aero/alpha-rad</independentVar>
             <tableData>
-              -0.20 -0.640
-               0.00  0.000
-               0.26  1.000
-               0.38  1.300
-               0.60  0.448
+              -0.20 -0.64
+               0.00  0.00
+               0.26  1.54
+               0.38  2.80
+               0.60  0.45
             </tableData>
           </table>
       </product>

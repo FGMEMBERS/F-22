@@ -688,7 +688,7 @@
 			<object-name>left-up-vector</object-name>
 			<object-name>right-burner</object-name>
 			<object-name>left-burner</object-name>
-			<property>surface-positions/elevator-pos-norm</property>
+			<property>fdm/jsbsim/fcs/tvc-pos-norm</property>
 			<factor>20</factor>
 			<center>
 				<x-m>6.42824</x-m>
@@ -706,7 +706,7 @@
 		<type>rotate</type>
 			<object-name>right-down-vector</object-name>
 			<object-name>left-down-vector</object-name>
-			<property>surface-positions/elevator-pos-norm</property>
+			<property>fdm/jsbsim/fcs/tvc-pos-norm</property>
 			<factor>20</factor>
 			<center>
 				<x-m>6.42824</x-m>

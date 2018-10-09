@@ -5,7 +5,7 @@
    xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
 
  <fileheader>
-  <author> Aeromatic v 0.96, Eli Wonnacott </author>
+  <author> Aeromatic v 0.96, ncc_42 </author>
   <filecreationdate>2017-10-19</filecreationdate>
   <version>$Revision: 1.21 $</version>
   <description> Models an F-22A. </description>

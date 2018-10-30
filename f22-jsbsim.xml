@@ -7,7 +7,7 @@
  <fileheader>
   <author> Aeromatic v 0.96, ncc_42 </author>
   <filecreationdate>2017-10-19</filecreationdate>
-  <version>$Revision: 1.30 $</version>
+  <version>$Revision: 1.31 $</version>
   <description> Models an F-22A. </description>
  </fileheader>
 
@@ -266,25 +266,19 @@
    </function>
 
    <function name="fcs/pitch-rate-cmd-g">
-    <quotient>
-     <product>
-      <property>velocities/ve-kts</property>
-      <property>velocities/q-aero-rad_sec</property>
-     </product>
-     <value>19.06</value>
-    </quotient>
+    <product>
+     <property>velocities/vt-fps</property>
+     <property>velocities/q-rad_sec</property>
+     <value>0.0310809502</value>
+    </product>
    </function>
 
    <function name="fcs/pitch-rate-cmd-g-delayed">
-    <quotient>
-     <product>
-      <property>velocities/ve-kts</property>
-      <property>velocities/q-aero-rad_sec</property>
-     </product>
-     <product>
-      <value>19.06</value>
-     </product>
-    </quotient>
+    <product>
+     <property>velocities/vt-fps</property>
+     <property>velocities/q-rad_sec</property>
+     <value>0.0310809502</value>
+    </product>
     <delay type="time">0.1</delay>
    </function>
 
@@ -315,6 +309,12 @@
        <value>-105.728</value>
       </product>
 
+      <product>
+       <property>aero/ci2vel</property>
+       <property>aero/alphadot-rad_sec</property>
+       <value>-169.92</value>
+      </product>
+
       <table>
        <independentVar lookup="row">aero/alpha-deg</independentVar>
        <tableData>
@@ -341,36 +341,6 @@
     </product>
    </function>
 
-   <function name="fcs/pitch-cmd-alpha-limit">
-     <table>
-      <independentVar lookup="row">aero/alpha-deg</independentVar>
-      <tableData>
-      -90  -2.0
-      -70  -1.0
-      -55   0.0
-       0    0.0
-       75   0.0
-       90   1.0
-       110  2.0
-      </tableData>
-     </table>
-   </function>
-
-   <function name="fcs/pitch-cmd-g-limit">
-     <table>
-      <independentVar lookup="row">accelerations/Nz</independentVar>
-      <tableData>
-      -3.5 -2.0
-      -3.0 -1.0
-      -2.5  0.0
-       0.0  0.0
-       7.5  0.0
-       9.0  1.0
-       9.5  2.0
-      </tableData>
-     </table>
-   </function>
-
    <function name="fcs/pitch-cmd-g-rate-limit">
      <table>
       <independentVar lookup="row">fcs/pitch-rate-cmd-g-rate</independentVar>
@@ -394,46 +364,46 @@
       <independentVar lookup="column">accelerations/Nz</independentVar>
       <independentVar lookup="table">aero/alpha-deg</independentVar>
       <tableData breakPoint="-90">
-           -3.5 -3.0 -2.5  0.0  8.5  8.9  9.5
-       -1   9.0  9.0  9.0  9.0  9.0  8.5  5.0
-        0   1.0  1.0  1.0  1.0  1.0  1.0  0.0
-        1   1.0  1.0  1.0  1.0  1.0  1.0  0.0
+           -3.5  -3.0  -2.5   0.0   8.5   9.0   9.5
+       -1   10.0  10.0  10.0  10.0  10.0  10.0  7.5
+        0   1.0   1.0   1.0   1.0   1.0   1.0   0.0
+        1   1.0   1.0   1.0   1.0   1.0   1.0   0.0
       </tableData>
       <tableData breakPoint="-70">
-           -3.5 -3.0 -2.5  0.0  8.5  8.9  9.5
-       -1   9.0  9.0  9.0  9.0  9.0  8.5  5.0
-        0   1.0  1.0  1.0  1.0  1.0  1.0  0.0
-        1   0.0  0.0  0.0  0.0  0.0  0.0  0.0
+           -3.5  -3.0  -2.5   0.0   8.5   9.0   9.5
+       -1   10.0  10.0  10.0  10.0  10.0  10.0  7.5
+        0   1.0   1.0   1.0   1.0   1.0   1.0   0.0
+        1   0.0   0.0   0.0   0.0   0.0   0.0   0.0
       </tableData>
       <tableData breakPoint="-55">
-           -3.5 -3.0 -2.5  0.0  8.5  8.9  9.5
-       -1   9.0  9.0  9.0  9.0  9.0  8.5  5.0
-        0   0.0  0.0  0.0  0.0  0.0  0.0  0.0
-        1   0.0 -2.5 -3.0 -3.0 -3.0 -3.0 -3.0
+           -3.5  -3.0  -2.5   0.0   8.5   9.0   9.5
+       -1   10.0  10.0  10.0  10.0  10.0  10.0  7.5
+        0   0.0   0.0   0.0   0.0   0.0   0.0   0.0
+        1   0.0  -2.5  -3.0  -3.0  -3.0  -3.0  -3.0
       </tableData>
       <tableData breakPoint="0">
-           -3.5 -3.0 -2.5  0.0  8.5  8.9  9.5
-       -1   9.0  9.0  9.0  9.0  9.0  8.5  5.0
-        0   0.0  0.0  0.0  0.0  0.0  0.0  0.0
-        1   0.0 -2.5 -3.0 -3.0 -3.0 -3.0 -3.0
+           -3.5  -3.0  -2.5   0.0   8.5   9.0   9.5
+       -1   10.0  10.0  10.0  10.0  10.0  10.0  7.5
+        0   0.0   0.0   0.0   0.0   0.0   0.0   0.0
+        1   0.0  -2.5  -3.0  -3.0  -3.0  -3.0  -3.0
       </tableData>
       <tableData breakPoint="75">
-           -3.5 -3.0 -2.5  0.0  8.5  8.9  9.5
-       -1   9.0  9.0  9.0  9.0  9.0  8.5  5.0
-        0   0.0  0.0  0.0  0.0  0.0  0.0  0.0
-        1   0.0 -2.5 -3.0 -3.0 -3.0 -3.0 -3.0
+           -3.5  -3.0  -2.5   0.0   8.5   9.0   9.5
+       -1   10.0  10.0  10.0  10.0  10.0  10.0  7.5
+        0   0.0   0.0   0.0   0.0   0.0   0.0   0.0
+        1   0.0  -2.5  -3.0  -3.0  -3.0  -3.0  -3.0
       </tableData>
       <tableData breakPoint="90">
-           -3.5 -3.0 -2.5  0.0  8.5  8.9  9.5
-       -1   0.0  0.0  0.0  0.0  0.0  0.0  0.0
-        0   0.0 -1.0 -1.0 -1.0 -1.0 -1.0 -1.0
-        1   0.0 -2.5 -3.0 -3.0 -3.0 -3.0 -3.0
+           -3.5  -3.0  -2.5   0.0   8.5   9.0   9.5
+       -1   0.0   0.0   0.0   0.0   0.0   0.0   0.0
+        0   0.0  -1.0  -1.0  -1.0  -1.0  -1.0  -1.0
+        1   0.0  -2.5  -3.0  -3.0  -3.0  -3.0  -3.0
       </tableData>
       <tableData breakPoint="110">
-           -3.5 -3.0 -2.5  0.0  8.5  8.9  9.5
-       -1   0.0 -1.0 -1.0 -1.0 -1.0 -1.0 -1.0
-        0   0.0 -1.0 -1.0 -1.0 -1.0 -1.0 -1.0
-        1   0.0 -2.5 -3.0 -3.0 -3.0 -3.0 -3.0
+           -3.5  -3.0  -2.5   0.0   8.5   9.0   9.5
+       -1   0.0  -1.0  -1.0  -1.0  -1.0  -1.0  -1.0
+        0   0.0  -1.0  -1.0  -1.0  -1.0  -1.0  -1.0
+        1   0.0  -2.5  -3.0  -3.0  -3.0  -3.0  -3.0
       </tableData>
      </table>
      <property>fcs/pitch-rate-cmd-g</property>
@@ -487,10 +457,12 @@
      <property>fcs/cqbar-psf</property>
      <value>840</value>
      <sum>
+
       <product>
        <property>aero/beta-rad</property>
        <value>-4.45</value>
       </product>
+
       <product>
        <property>aero/bi2vel</property>
        <property>velocities/p-aero-rad_sec</property>
@@ -504,15 +476,18 @@
         </tableData>
        </table>
       </product>
+
       <product>
        <property>aero/bi2vel</property>
        <property>velocities/r-aero-rad_sec</property>
        <value>6.675</value>
       </product>
+
       <product>
        <property>fcs/rudder-pos-deg2</property>
        <value>0.007565</value>
       </product>
+
      </sum>
     </product>
    </function>
@@ -528,7 +503,7 @@
         1   4.537
       </tableData>
      </table>
-     <property>velocities/p-aero-rad_sec</property>
+     <property>velocities/p-rad_sec</property>
     </difference>
     <value>-56039</value>
     </product>
@@ -624,35 +599,26 @@
          1  -0.5
        </tableData>
       </table>
-      <property>velocities/r-aero-rad_sec</property>
+      <property>velocities/r-rad_sec</property>
      </difference>
      <value>-149525</value>
     </product>
    </function>
 
    <function name="fcs/yaw-cmd-effect">
-    <sum>
-
-     <product>
-      <property>fcs/cqbar-psf</property>
-      <value>840</value>
-      <table>
-       <independentVar lookup="row">aero/alpha-rad</independentVar>
-       <tableData>
-        -2.66  -4.6725
-        -1.01   0.0
-         0.45   4.6725
-         2.04   0.0
-       </tableData>
-      </table>
-     </product>
-
-     <product>
-      <value>0</value>
-      <value>1</value>
-     </product>
-
-    </sum>
+    <product>
+     <property>fcs/cqbar-psf</property>
+     <value>840</value>
+     <table>
+      <independentVar lookup="row">aero/alpha-rad</independentVar>
+      <tableData>
+       -2.66  -4.6725
+       -1.01   0.0
+        0.45   4.6725
+        2.04   0.0
+      </tableData>
+     </table>
+    </product>
    </function>
 
    <function name="fcs/yaw-cmd">
@@ -821,32 +787,6 @@
       <output>fcs/left-aileron-pos-deg2</output>
    </kinematic>
 
-   <aerosurface_scale name="left aileron normalization">
-      <input>fcs/left-aileron-pos-deg2</input>
-      <domain>
-        <min> -25 </min>
-        <max>  25 </max>
-      </domain>
-      <range>
-        <min> -1 </min>
-        <max>  1 </max>
-      </range>
-      <output>fcs/left-aileron-pos-norm</output>
-   </aerosurface_scale>
-
-   <aerosurface_scale name="right aileron normalization">
-      <input>fcs/right-aileron-pos-deg2</input>
-      <domain>
-        <min> -25 </min>
-        <max>  25 </max>
-      </domain>
-      <range>
-        <min> -1 </min>
-        <max>  1 </max>
-      </range>
-      <output>fcs/right-aileron-pos-norm</output>
-   </aerosurface_scale>
-
   </channel>
 
   <channel name="Yaw">
@@ -883,19 +823,6 @@
        </traverse>
       <output>fcs/rudder-pos-deg2</output>
    </kinematic>
-
-   <aerosurface_scale name="rudder normalization">
-      <input>fcs/rudder-pos-deg2</input>
-      <domain>
-        <min> -30 </min>
-        <max>  30 </max>
-      </domain>
-      <range>
-        <min> -1 </min>
-        <max>  1 </max>
-      </range>
-      <output>fcs/rudder-pos-norm</output>
-   </aerosurface_scale>
 
   </channel>
 

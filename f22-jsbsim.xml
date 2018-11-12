@@ -7,7 +7,7 @@
  <fileheader>
   <author> Aeromatic v 0.96, ncc_42 </author>
   <filecreationdate>2017-10-19</filecreationdate>
-  <version>$Revision: 1.31 $</version>
+  <version>$Revision: 1.32 $</version>
   <description> Models an F-22A. </description>
  </fileheader>
 
@@ -134,8 +134,8 @@
     </location>
     <static_friction>  1.00 </static_friction>
     <dynamic_friction> 1.00 </dynamic_friction>
-    <spring_coeff unit="LBS/FT">      83500.00 </spring_coeff>
-    <damping_coeff unit="LBS/FT/SEC"> 83500.00 </damping_coeff>
+    <spring_coeff unit="LBS/FT">      41750.00 </spring_coeff>
+    <damping_coeff unit="LBS/FT/SEC"> 4175.00  </damping_coeff>
   </contact>
 
   <contact type="STRUCTURE" name="RIGHT_WING_TIP_FRONT">
@@ -146,8 +146,8 @@
     </location>
     <static_friction>  1.00 </static_friction>
     <dynamic_friction> 1.00 </dynamic_friction>
-    <spring_coeff unit="LBS/FT">      83500.00 </spring_coeff>
-    <damping_coeff unit="LBS/FT/SEC"> 83500.00 </damping_coeff>
+    <spring_coeff unit="LBS/FT">      41750.00 </spring_coeff>
+    <damping_coeff unit="LBS/FT/SEC"> 4175.00  </damping_coeff>
   </contact>
 
  </ground_reactions>
@@ -267,18 +267,36 @@
 
    <function name="fcs/pitch-rate-cmd-g">
     <product>
-     <property>velocities/vt-fps</property>
+     <sum>
+
+      <product>
+       <property>velocities/vt-fps</property>
+       <table>
+        <independentVar lookup="row">velocities/vt-fps</independentVar>
+        <tableData>
+          556  0
+          557  1
+        </tableData>
+       </table>
+      </product>
+
+      <table>
+       <independentVar lookup="row">velocities/vt-fps</independentVar>
+       <tableData>
+         556  556
+         557  0
+       </tableData>
+      </table>
+
+     </sum>
      <property>velocities/q-rad_sec</property>
      <value>0.0310809502</value>
+
     </product>
    </function>
 
    <function name="fcs/pitch-rate-cmd-g-delayed">
-    <product>
-     <property>velocities/vt-fps</property>
-     <property>velocities/q-rad_sec</property>
-     <value>0.0310809502</value>
-    </product>
+    <property>fcs/pitch-rate-cmd-g</property>
     <delay type="time">0.1</delay>
    </function>
 
@@ -365,45 +383,45 @@
       <independentVar lookup="table">aero/alpha-deg</independentVar>
       <tableData breakPoint="-90">
            -3.5  -3.0  -2.5   0.0   8.5   9.0   9.5
-       -1   10.0  10.0  10.0  10.0  10.0  10.0  7.5
-        0   1.0   1.0   1.0   1.0   1.0   1.0   0.0
-        1   1.0   1.0   1.0   1.0   1.0   1.0   0.0
+       -1   10.0  10.0  10.0  10.0  10.0  10.0  7.0
+        0   1.0   1.0   1.0   1.0   1.0   1.0   1.0
+        1   1.0   1.0   1.0   1.0   1.0   1.0   1.0
       </tableData>
       <tableData breakPoint="-70">
            -3.5  -3.0  -2.5   0.0   8.5   9.0   9.5
-       -1   10.0  10.0  10.0  10.0  10.0  10.0  7.5
-        0   1.0   1.0   1.0   1.0   1.0   1.0   0.0
+       -1   10.0  10.0  10.0  10.0  10.0  10.0  7.0
+        0   1.0   1.0   1.0   1.0   1.0   1.0   1.0
         1   0.0   0.0   0.0   0.0   0.0   0.0   0.0
       </tableData>
       <tableData breakPoint="-55">
            -3.5  -3.0  -2.5   0.0   8.5   9.0   9.5
-       -1   10.0  10.0  10.0  10.0  10.0  10.0  7.5
+       -1   10.0  10.0  10.0  10.0  10.0  10.0  7.0
         0   0.0   0.0   0.0   0.0   0.0   0.0   0.0
-        1   0.0  -2.5  -3.0  -3.0  -3.0  -3.0  -3.0
+        1   0.0  -3.0  -3.0  -3.0  -3.0  -3.0  -3.0
       </tableData>
       <tableData breakPoint="0">
            -3.5  -3.0  -2.5   0.0   8.5   9.0   9.5
-       -1   10.0  10.0  10.0  10.0  10.0  10.0  7.5
+       -1   10.0  10.0  10.0  10.0  10.0  10.0  7.0
         0   0.0   0.0   0.0   0.0   0.0   0.0   0.0
-        1   0.0  -2.5  -3.0  -3.0  -3.0  -3.0  -3.0
+        1   0.0  -3.0  -3.0  -3.0  -3.0  -3.0  -3.0
       </tableData>
       <tableData breakPoint="75">
            -3.5  -3.0  -2.5   0.0   8.5   9.0   9.5
-       -1   10.0  10.0  10.0  10.0  10.0  10.0  7.5
+       -1   10.0  10.0  10.0  10.0  10.0  10.0  7.0
         0   0.0   0.0   0.0   0.0   0.0   0.0   0.0
-        1   0.0  -2.5  -3.0  -3.0  -3.0  -3.0  -3.0
+        1   0.0  -3.0  -3.0  -3.0  -3.0  -3.0  -3.0
       </tableData>
       <tableData breakPoint="90">
            -3.5  -3.0  -2.5   0.0   8.5   9.0   9.5
        -1   0.0   0.0   0.0   0.0   0.0   0.0   0.0
-        0   0.0  -1.0  -1.0  -1.0  -1.0  -1.0  -1.0
-        1   0.0  -2.5  -3.0  -3.0  -3.0  -3.0  -3.0
+        0   0.0  -3.0  -3.0  -3.0  -3.0  -3.0  -3.0
+        1   0.0  -3.0  -3.0  -3.0  -3.0  -3.0  -3.0
       </tableData>
       <tableData breakPoint="110">
            -3.5  -3.0  -2.5   0.0   8.5   9.0   9.5
-       -1   0.0  -1.0  -1.0  -1.0  -1.0  -1.0  -1.0
-        0   0.0  -1.0  -1.0  -1.0  -1.0  -1.0  -1.0
-        1   0.0  -2.5  -3.0  -3.0  -3.0  -3.0  -3.0
+       -1  -1.0  -3.0  -3.0  -3.0  -3.0  -3.0  -3.0
+        0  -1.0  -3.0  -3.0  -3.0  -3.0  -3.0  -3.0
+        1  -1.0  -3.0  -3.0  -3.0  -3.0  -3.0  -3.0
       </tableData>
      </table>
      <property>fcs/pitch-rate-cmd-g</property>
@@ -492,6 +510,16 @@
     </product>
    </function>
 
+   <function name="fcs/pitch-trim-sum-tvc">
+    <product>
+     <property>fcs/pitch-trim-sum</property>
+     <difference>
+      <value>1</value>
+      <property>gear/gear-pos-norm</property>
+     </difference>
+    </product>
+   </function>
+
    <function name="fcs/roll-cmd-input-rate">
     <product>
     <difference>
@@ -546,23 +574,28 @@
    <function name="fcs/yaw-cmd-comp">
     <product>
      <property>fcs/cqbar-psf</property>
-     <value>0</value>
-     <!-- <sum> -->
+     <value>840</value>
+     <sum>
+
+      <product>
+       <property>metrics/bw-ft</property>
+       <property>aero/beta-rad</property>
+       <value>0.12</value>
+       <value>1</value>
+      </product>
+
       <product>
        <property>aero/beta-rad</property>
-       <value>5.34</value>
+       <value>-1.66667</value>
       </product>
-      <!-- <product>
-       <property>aero/bi2vel</property>
-       <property>velocities/r-aero-rad_sec</property>
-       <value>-6.675</value>
-      </product>
-     </sum> -->
+
+     </sum>
     </product>
    </function>
 
    <function name="fcs/yaw-cmd-input-beta">
     <product>
+
      <difference>
       <table>
        <independentVar lookup="row">fcs/rudder-cmd-norm</independentVar>
@@ -574,17 +607,23 @@
       </table>
       <property>aero/beta-deg</property>
      </difference>
+
      <table>
       <independentVar lookup="row">aero/alpha-deg</independentVar>
       <independentVar lookup="column">gear/unit/WOW</independentVar>
       <tableData>
-            0  1
-       -30  0  0
-         0  1  0
-        30  0  0
+            0     1
+      -110  0.00  0.00
+       -60 -0.05  0.00
+       -30 -0.15  0.00
+         0 -0.15  0.00
+        30 -0.15  0.00
+        60 -0.05  0.00
+       110  0.00  0.00
       </tableData>
      </table>
-     <value>15000</value>
+
+     <value>-149525</value>
     </product>
    </function>
 
@@ -624,7 +663,7 @@
    <function name="fcs/yaw-cmd">
     <quotient>
      <sum>
-      <!-- <property>fcs/yaw-cmd-comp</property> -->
+      <property>fcs/yaw-cmd-comp</property>
       <property>fcs/yaw-cmd-input-beta</property>
       <property>fcs/yaw-cmd-input-rate</property>
      </sum>
@@ -632,21 +671,10 @@
     </quotient>
    </function>
 
-   <function name="fcs/pitch-trim-sum-tvc">
-    <product>
-     <property>fcs/pitch-trim-sum</property>
-     <difference>
-      <value>1</value>
-      <property>gear/gear-pos-norm</property>
-     </difference>
-    </product>
-   </function>
-
   <channel name="Pitch">
 
    <summer name="Pitch Trim Sum">
       <input>fcs/pitch-cmd</input>
-      <!-- <input>fcs/pitch-cmd-g-rate-limit</input> -->
       <clipto>
         <min> -1 </min>
         <max>  1 </max>
@@ -793,7 +821,6 @@
 
    <summer name="Rudder Trim Sum">
       <input>fcs/yaw-cmd</input>
-      <input>fcs/rudder-cmd-norm</input>
       <clipto>
         <min> -1 </min>
         <max>  1 </max>
@@ -861,6 +888,36 @@
 
   </channel>
 
+  <channel>
+
+   <scheduled_gain name="Throttle0">
+    <input>fcs/throttle-cmd-norm[0]</input>
+    <table>
+     <independentVar>fcs/throttle-pos-norm[0]</independentVar>
+     <tableData>
+      0.0    0.0
+      0.9    1.0
+      1.0    2.0
+     </tableData>
+    </table>
+    <output>fcs/throttle-pos-norm[0]</output>
+   </scheduled_gain>
+
+   <scheduled_gain name="Throttle1">
+    <input>fcs/throttle-cmd-norm[1]</input>
+    <table>
+     <independentVar>fcs/throttle-pos-norm[1]</independentVar>
+     <tableData>
+      0.0    0.0
+      0.9    1.0
+      1.0    2.0
+     </tableData>
+    </table>
+    <output>fcs/throttle-pos-norm[1]</output>
+   </scheduled_gain>
+
+  </channel>
+
   <channel name="Leading Edge Flaps">
   
    <summer name="LEF Sum">
@@ -872,7 +929,7 @@
    </summer>
    
    <kinematic name="LEF Control">
-     <input>aero/alpha-rad</input> <!-- fcs/lef-sum -->
+     <input>aero/alpha-rad</input>
      <traverse>
        <setting>
           <position>  0 </position>
@@ -1250,6 +1307,7 @@
            <property>metrics/bw-ft</property>
            <property>aero/beta-rad</property>
            <value>0.12</value>
+           <value>1</value>
        </product>
     </function>
 

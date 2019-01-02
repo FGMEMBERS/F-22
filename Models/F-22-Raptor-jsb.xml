@@ -270,8 +270,8 @@
 	<animation>
 		<type>rotate</type>
 			<object-name>right-rudder</object-name>
-				<property>fdm/jsbsim/fcs/rudder-pos-deg2</property>
-					<factor>-1</factor>
+				<property>fdm/jsbsim/fcs/right-rudder-pos-deg2</property>
+					<factor>1</factor>
 						<axis>
 							<x1-m>6.7847</x1-m>
 							<y1-m>1.5161</y1-m>
@@ -285,7 +285,7 @@
 	<animation>
 		<type>rotate</type>
 			<object-name>left-rudder</object-name>
-				<property>fdm/jsbsim/fcs/rudder-pos-deg2</property>
+				<property>fdm/jsbsim/fcs/left-rudder-pos-deg2</property>
 					<factor>-1</factor>
 						<axis>
 							<x1-m>6.7847</x1-m>
@@ -302,7 +302,7 @@
 	<animation>
 		<type>rotate</type>
 			<object-name>right-elevator</object-name>
-				<property>fdm/jsbsim/fcs/elevator-pos-deg2</property>
+				<property>fdm/jsbsim/fcs/right-stabilator-pos-deg2</property>
 					<factor>1</factor>
 						<center>
 							<x-m>7.12347</x-m>
@@ -319,7 +319,7 @@
 	<animation>
 		<type>rotate</type>
 			<object-name>left-elevator</object-name>
-					<property>fdm/jsbsim/fcs/elevator-pos-deg2</property>
+					<property>fdm/jsbsim/fcs/left-stabilator-pos-deg2</property>
 						<factor>1</factor>
 							<center>
 								<x-m>7.12347</x-m>
@@ -339,7 +339,7 @@
 		<type>rotate</type>
 			<object-name>right-aileron</object-name>
 				<property>fdm/jsbsim/fcs/right-aileron-pos-deg2</property>
-					<factor>-1</factor>
+					<factor>1</factor>
 						<axis>
 							<x1-m>4.8723</x1-m>
 							<y1-m>4.5645</y1-m>
@@ -370,7 +370,7 @@
 	<animation>
 		<type>rotate</type>
 			<object-name>right-flap</object-name>
-				<property>fdm/jsbsim/fcs/flap-pos-deg</property>
+				<property>fdm/jsbsim/fcs/right-flaperon-pos-deg</property>
 					<factor>1</factor>
 						<axis>
 							<x1-m>5.26073</x1-m>
@@ -385,71 +385,7 @@
 	<animation>
 	<type>rotate</type>
 		<object-name>left-flap</object-name>
-			<property>fdm/jsbsim/fcs/flap-pos-deg</property>
-				<factor>1</factor>
-					<axis>
-						<x1-m>4.511</x1-m>
-							<y1-m>-4.55745</y1-m>
-						<z1-m>-0.649812</z1-m>
-					<x2-m>5.08305</x2-m>
-				<y2-m>-1.89392</y2-m>
-			<z2-m>-0.667692</z2-m>
-		</axis>>
-	</animation>
-
-<!-- Aileron as flap animations -->
-
-		<animation>
-		<type>rotate</type>
-			<object-name>right-aileron</object-name>
-				<property>fdm/jsbsim/fcs/flap-pos-deg</property>
-					<factor>1</factor>
-						<axis>
-							<x1-m>4.8723</x1-m>
-							<y1-m>4.5645</y1-m>
-						<z1-m>-0.667611</z1-m>
-					<x2-m>4.48416</x2-m>
-				<y2-m>5.88276</y2-m>
-			<z2-m>-0.667611</z2-m>
-		</axis>>
-	</animation>
-
-	<animation>
-		<type>rotate</type>
-			<object-name>left-aileron</object-name>
-				<property>fdm/jsbsim/fcs/flap-pos-deg</property>
-					<factor>-1</factor> <!-- 55 -->
-						<axis>
-							<x1-m>4.88483</x1-m>
-							<y1-m>-4.56758</y1-m>
-						<z1-m>-0.66688</z1-m>
-					<x2-m>4.47688</x2-m>
-				<y2-m>-5.91991</y2-m>
-			<z2-m>-0.66688</z2-m>
-		</axis>>
-	</animation>
-
-<!-- Flaperon animations -->
-
-		<animation>
-		<type>rotate</type>
-			<object-name>right-flap</object-name>
-				<property>fdm/jsbsim/fcs/right-aileron-pos-deg2</property>
-					<factor>-1</factor>
-						<axis>
-							<x1-m>5.26073</x1-m>
-								<y1-m>1.8939</y1-m>
-							<z1-m>-0.67044</z1-m>
-						<x2-m>4.50092</x2-m>
-				<y2-m>4.55542</y2-m>
-			<z2-m>-0.638588</z2-m>
-		</axis>>
-	</animation>
-
-	<animation>
-	<type>rotate</type>
-		<object-name>left-flap</object-name>
-			<property>fdm/jsbsim/fcs/left-aileron-pos-deg2</property>
+			<property>fdm/jsbsim/fcs/left-flaperon-pos-deg</property>
 				<factor>1</factor>
 					<axis>
 						<x1-m>4.511</x1-m>
@@ -466,8 +402,8 @@
 	<animation>
 		<type>translate</type>
 			<object-name>right-slat</object-name>
-				<property>fdm/jsbsim/fcs/slat-pos-rad</property>
-					<factor>0.0008</factor>
+				<property>fdm/jsbsim/fcs/right-lef-pos-deg</property>
+					<factor>-0.000014</factor>
 						<axis>
 					<x>-1</x>
 				<y>-0.1</y>
@@ -478,8 +414,8 @@
 	<animation>
 		<type>rotate</type>
 			<object-name>right-slat</object-name>
-				<property>fdm/jsbsim/fcs/slat-pos-rad</property>
-					<factor>-57.3</factor>
+				<property>fdm/jsbsim/fcs/right-lef-pos-deg</property>
+					<factor>1</factor>
 						<axis>
 							<x1-m>-0.115611</x1-m>
 							<y1-m>2.18951</y1-m>
@@ -493,8 +429,8 @@
 	<animation>
 		<type>translate</type>
 			<object-name>left-slat</object-name>
-				<property>fdm/jsbsim/fcs/slat-pos-norm</property>
-					<factor>0.0008</factor>
+				<property>fdm/jsbsim/fcs/left-lef-pos-deg</property>
+					<factor>-0.000014</factor>
 						<axis>
 					<x>-1</x>
 				<y>0.1</y>
@@ -505,8 +441,8 @@
 	<animation>
 		<type>rotate</type>
 			<object-name>left-slat</object-name>
-				<property>fdm/jsbsim/fcs/slat-pos-rad</property>
-					<factor>-57.3</factor>
+				<property>fdm/jsbsim/fcs/right-lef-pos-deg</property>
+					<factor>1</factor>
 						<axis>
 							<x1-m>2.82814</x1-m>
 							<y1-m>-5.9159</y1-m>
@@ -515,169 +451,6 @@
 				<y2-m>-2.19631</y2-m>
 			<z2-m>-0.589751</z2-m>
 		</axis>>
-	</animation>
-	
-<!-- Speedbrake animations -->
-	
-	<animation>
-		<type>rotate</type>
-			<object-name>right-rudder</object-name>
-				<property>fdm/jsbsim/fcs/speedbrake-pos-norm</property>
-					<factor>45</factor>
-						<axis>
-							<x1-m>6.7847</x1-m>
-							<y1-m>1.5161</y1-m>
-						<z1-m>-0.3454</z1-m>
-					<x2-m>5.6049</x2-m>
-				<y2-m>2.9010</y2-m>
-			<z2-m>2.2533</z2-m>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>rotate</type>
-			<object-name>left-rudder</object-name>
-				<property>fdm/jsbsim/fcs/speedbrake-pos-norm</property>
-					<factor>-45</factor>
-						<axis>
-							<x1-m>6.7847</x1-m>
-							<y1-m>-1.5161</y1-m>
-						<z1-m>-0.3454</z1-m>
-					<x2-m>5.6049</x2-m>
-				<y2-m>-2.9010</y2-m>
-			<z2-m>2.2533</z2-m>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>rotate</type>
-			<object-name>right-elevator</object-name>
-				<property>fdm/jsbsim/fcs/speedbrake-pos-norm</property>
-					<factor>-10</factor>
-						<center>
-							<x-m>7.47206</x-m>
-								<y-m>2.24499</y-m>
-								<z-m>-0.441493</z-m>
-							</center>
-						<axis>
-					<x>0</x>
-				<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-
-	<animation>
-		<type>rotate</type>
-			<object-name>left-elevator</object-name>
-				<property>fdm/jsbsim/fcs/speedbrake-pos-norm</property>
-						<factor>-10</factor>
-							<center>
-								<x-m>7.47206</x-m>
-									<y-m>-2.24499</y-m>
-								<z-m>-0.441493</z-m>
-							</center>
-						<axis>
-					<x>0</x>
-				<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-	
-		<animation>
-		<type>rotate</type>
-			<object-name>right-aileron</object-name>
-				<property>fdm/jsbsim/fcs/speedbrake-pos-norm</property>
-					<factor>-23</factor> <!-- -55 -->
-						<axis>
-							<x1-m>4.8723</x1-m>
-							<y1-m>4.5645</y1-m>
-						<z1-m>-0.667611</z1-m>
-					<x2-m>4.48416</x2-m>
-				<y2-m>5.88276</y2-m>
-			<z2-m>-0.667611</z2-m>
-		</axis>>
-	</animation>
-
-	<animation>
-		<type>rotate</type>
-			<object-name>left-aileron</object-name>
-				<property>fdm/jsbsim/fcs/speedbrake-pos-norm</property>
-					<factor>23</factor> <!-- 55 -->
-						<axis>
-							<x1-m>4.88483</x1-m>
-							<y1-m>-4.56758</y1-m>
-						<z1-m>-0.66688</z1-m>
-					<x2-m>4.47688</x2-m>
-				<y2-m>-5.91991</y2-m>
-			<z2-m>-0.66688</z2-m>
-		</axis>>
-	</animation>
-	
-		<animation>
-		<type>rotate</type>
-			<object-name>right-flap</object-name>
-				<property>fdm/jsbsim/fcs/speedbrake-pos-norm</property>
-					<factor>10</factor>
-						<axis>
-							<x1-m>5.26073</x1-m>
-								<y1-m>1.8939</y1-m>
-							<z1-m>-0.67044</z1-m>
-						<x2-m>4.50092</x2-m>
-				<y2-m>4.55542</y2-m>
-			<z2-m>-0.638588</z2-m>
-		</axis>>
-	</animation>
-
-	<animation>
-	<type>rotate</type>
-		<object-name>left-flap</object-name>
-			<property>fdm/jsbsim/fcs/speedbrake-pos-norm</property>
-				<factor>10</factor>
-					<axis>
-						<x1-m>4.511</x1-m>
-							<y1-m>-4.55745</y1-m>
-						<z1-m>-0.649812</z1-m>
-					<x2-m>5.08305</x2-m>
-				<y2-m>-1.89392</y2-m>
-			<z2-m>-0.667692</z2-m>
-		</axis>>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-			<object-name>right-up-vector</object-name>
-				<object-name>left-up-vector</object-name>
-					<property>fdm/jsbsim/fcs/speedbrake-pos-norm</property>
-						<factor>-10</factor>
-							<center>
-								<x-m>6.42824</x-m>
-									<y-m>0</y-m>
-								<z-m>-0.414674</z-m>
-							</center>
-						<axis>
-					<x>0</x>
-				<y>1</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>rotate</type>
-			<object-name>right-down-vector</object-name>
-				<object-name>left-down-vector</object-name>
-					<property>fdm/jsbsim/fcs/speedbrake-pos-norm</property>
-						<factor>-10</factor>
-							<center>
-								<x-m>6.42824</x-m>
-									<y-m>0</y-m>
-								<z-m>-1.06084</z-m>
-							</center>
-						<axis>
-					<x>0</x>
-				<y>1</y>
-			<z>0</z>
-		</axis>
 	</animation>
 	
 <!-- Nozzle vector animations -->
@@ -728,7 +501,7 @@
 		<condition>
 			<greater-than>
 				<property>gear/gear[0]/position-norm</property>
-				<value>0.05</value>
+				<value>0.0</value>
 			</greater-than>
 		</condition>
 	</animation>
@@ -739,12 +512,16 @@
 		<property>gear/gear[0]/position-norm</property>
 		<interpolation>
 			<entry>
-				<ind>0.0</ind>
+				<ind>0.25</ind>
 				<dep>100</dep>
 			</entry>
 			<entry>
-				<ind>0.9</ind>
-				<dep>100</dep>
+				<ind>0.5</ind>
+				<dep>79</dep>
+			</entry>
+			<entry>
+				<ind>0.75</ind>
+				<dep>51</dep>
 			</entry>
 			<entry>
 				<ind>1.0</ind>
@@ -762,6 +539,27 @@
 			<z>0.0</z>
 		</axis>
 	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>nwheel</object-name>
+		<property>gear/gear[0]/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.25</ind>
+				<dep>-0.2</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>0</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
 
 	<animation>
 		<type>rotate</type>
@@ -773,11 +571,7 @@
 				<dep>-45</dep>
 			</entry>
 			<entry>
-				<ind>0.7</ind>
-				<dep>-45</dep>
-			</entry>
-			<entry>
-				<ind>1.0</ind>
+				<ind>0.25</ind>
 				<dep>0</dep>
 			</entry>
 		</interpolation>
@@ -801,11 +595,7 @@
 				<dep>45</dep>
 			</entry>
 			<entry>
-				<ind>0.7</ind>
-				<dep>45</dep>
-			</entry>
-			<entry>
-				<ind>1.0</ind>
+				<ind>0.25</ind>
 				<dep>0</dep>
 			</entry>
 		</interpolation>
@@ -827,7 +617,7 @@
 		<condition>
 			<greater-than>
 				<property>gear/gear[1]/position-norm</property>
-				<value>0.01</value>
+				<value>0.25</value>
 			</greater-than>
 		</condition>
 	</animation>
@@ -838,7 +628,7 @@
 		<condition>
 			<greater-than>
 				<property>gear/gear[2]/position-norm</property>
-				<value>0.01</value>
+				<value>0.25</value>
 			</greater-than>
 		</condition>
 	</animation>
@@ -849,11 +639,7 @@
 		<property>gear/gear[1]/position-norm</property>
 		<interpolation>
 			<entry>
-				<ind>0.0</ind>
-				<dep>-90</dep>
-			</entry>
-			<entry>
-				<ind>0.9</ind>
+				<ind>0.75</ind>
 				<dep>-90</dep>
 			</entry>
 			<entry>
@@ -874,16 +660,33 @@
 	</animation>
 	
 	<animation>
-		<type>rotate</type>
-		<object-name>rwheel</object-name>
+		<type>translate</type>
+		<object-name>lwheel</object-name>
 		<property>gear/gear[1]/position-norm</property>
 		<interpolation>
 			<entry>
-				<ind>0.0</ind>
-				<dep>90</dep>
+				<ind>0.75</ind>
+				<dep>1.1</dep>
 			</entry>
 			<entry>
-				<ind>0.9</ind>
+				<ind>1.0</ind>
+				<dep>0</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>rotate</type>
+		<object-name>rwheel</object-name>
+		<property>gear/gear[2]/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.75</ind>
 				<dep>90</dep>
 			</entry>
 			<entry>
@@ -902,6 +705,27 @@
 			<z>0</z>
 		</axis>
 	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>rwheel</object-name>
+		<property>gear/gear[2]/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.75</ind>
+				<dep>1.1</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>0</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x>0</x>
+			<y>0</y>
+			<z>1</z>
+		</axis>
+	</animation>
 
 	<animation>
 		<type>rotate</type>
@@ -909,15 +733,11 @@
 		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
-				<ind>0.0</ind>
+				<ind>0.5</ind>
 				<dep>138</dep>
 			</entry>
 			<entry>
-				<ind>0.7</ind>
-				<dep>138</dep>
-			</entry>
-			<entry>
-				<ind>1.0</ind>
+				<ind>0.75</ind>
 				<dep>0</dep>
 			</entry>
 		</interpolation>
@@ -937,15 +757,11 @@
 		<property>gear/gear[1]/position-norm</property>
 		<interpolation>
 			<entry>
-				<ind>0.0</ind>
+				<ind>0.5</ind>
 				<dep>-138</dep>
 			</entry>
 			<entry>
-				<ind>0.7</ind>
-				<dep>-138</dep>
-			</entry>
-			<entry>
-				<ind>1.0</ind>
+				<ind>0.75</ind>
 				<dep>0</dep>
 			</entry>
 		</interpolation>
@@ -965,15 +781,11 @@
 		<property>gear/gear[2]/position-norm</property>
 		<interpolation>
 			<entry>
-				<ind>0.0</ind>
+				<ind>0.5</ind>
 				<dep>-63</dep>
 			</entry>
 			<entry>
-				<ind>0.7</ind>
-				<dep>-63</dep>
-			</entry>
-			<entry>
-				<ind>1.0</ind>
+				<ind>0.75</ind>
 				<dep>0</dep>
 			</entry>
 		</interpolation>
@@ -993,15 +805,11 @@
 		<property>gear/gear[1]/position-norm</property>
 		<interpolation>
 			<entry>
-				<ind>0.0</ind>
+				<ind>0.5</ind>
 				<dep>63</dep>
 			</entry>
 			<entry>
-				<ind>0.7</ind>
-				<dep>63</dep>
-			</entry>
-			<entry>
-				<ind>1.0</ind>
+				<ind>0.75</ind>
 				<dep>0</dep>
 			</entry>
 		</interpolation>
@@ -1156,7 +964,7 @@
 <!-- Lights -->
 	
 
-	<model>
+	<!-- <model>
 		<path>Aircraft/F-22/Models/Lights/RedLight.xml</path>
 		<offsets>
 			<x-m>4.2</x-m>
@@ -1191,7 +999,7 @@
 			<y-m>6.2</y-m>
 			<z-m>-0.8</z-m>
 		</offsets>
-	</model>
+	</model> -->
 	
 	<model>
    
@@ -1216,7 +1024,7 @@
 			<z-m>-0.5</z-m>
 			<pitch-deg>0</pitch-deg>
 		</offsets>
-	</model> 
+	</model>
 	
 	<model>
 		<path>Aircraft/F-22/Models/Effects/Vapour/Vapour2.xml</path>
